@@ -28,5 +28,15 @@ def fib2(n):
     return prev2
 
 
+def fib3(n):
+    """
+    ТРЕТИЙ ВАРИАНТ
+    """
+    num1, num2 = 0, 1
+    for i in range(n - 1):
+        num1, num2 = num2, num1 + num2
+    return num2
+
+
 if __name__ == "__main__":
-    print(fib2(10))
+    print(fib3(10))

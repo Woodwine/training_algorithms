@@ -5,15 +5,14 @@
 
 
 def func(a: int, b: int):
-    if a == 0:
-        return b
-    if b == 0:
-        return a
+    if a == 0 or b == 0:
+        return max(a, b)
     if a >= b:
         return func(a % b, b)
     else:
-        return func(a, b % a)
+        return func(b % a, a)
 
 
 if __name__ == '__main__':
     print(func(100, 45))
+
